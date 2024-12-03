@@ -14,7 +14,7 @@ jobs:
         run: |
           wget https://github.com/jmccrae/ewe/releases/download/Ubuntu-latest/ewe
           chmod +x ewe
-          ./ewe changes.yaml`
+          ./ewe changes.yaml
       - name: Check for modified files
         id: git-check
         run: echo "modified=$(if git diff-index --quiet HEAD --; then echo "false"; else echo "true"; fi)" >> $GITHUB_OUTPUT
